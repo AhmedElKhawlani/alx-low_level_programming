@@ -3,7 +3,14 @@
  * EL KHAWLANI Ahmed - ALX Student - elkhawlani.python@gmail.com
  */
 
-#include <stdio>
+#include <stdio.h>
+/**
+ * main - Prints "Programming is like building a multilingual
+ *                puzzle, followed by a new line.
+ *                Without using printf
+ *
+ * Return: Always 0.
+ */
 
 int main(void)
 {
