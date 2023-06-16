@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - prints the alphabet in lowercase, followed by a new line
+ * Not for q and e
+ * Return: Aways 0
+ */
+
 int main(void)
 {
 	char ch = 'a';
