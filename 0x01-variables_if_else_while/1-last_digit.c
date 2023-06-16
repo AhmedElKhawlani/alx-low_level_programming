@@ -4,7 +4,7 @@
 
 /**
  * main - prints the last digit of the random number n
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 
 int main(void)
