@@ -2,14 +2,14 @@
 
 /**
  * swap_int - swaps the values of two integers
- * @a: pointer to first value
- * @b: pointer to second value
+ * @m: pointer to first value
+ * @n: pointer to second value
  */
-void swap_int(int *a, int *b)
+void swap_int(int *m, int *n)
 {
-	int c;
+	int q;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	q = *m;
+	*m = *n;
+	*n = q;
 }
