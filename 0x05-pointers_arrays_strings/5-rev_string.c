@@ -2,9 +2,9 @@
 
 /**
  * rev_string - reverses a string
- * @s: string to be reversed
+ * @ch: string to be reversed
  */
-void rev_string(char *s)
+void rev_string(char *ch)
 {
 	char tmp;
 	int i, len, len1;
@@ -12,7 +12,7 @@ void rev_string(char *s)
 	len = 0;
 	len1 = 0;
 
-	while (s[len] != '\0')
+	while (ch[len] != '\0')
 	{
 		len++;
 	}
@@ -21,8 +21,8 @@ void rev_string(char *s)
 
 	for (i = 0; i < len / 2; i++)
 	{
-		tmp = s[i];
-		s[i] = s[len1];
-		s[len1--] = tmp;
+		tmp = ch[i];
+		ch[i] = ch[len1];
+		ch[len1--] = tmp;
 	}
 }
