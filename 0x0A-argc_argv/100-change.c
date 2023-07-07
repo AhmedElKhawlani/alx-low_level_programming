@@ -19,6 +19,11 @@ int main(int argc, char *argv[])
 	int coins = 0;
 	int sum = atoi(argv[1]);
 
+	if (sum < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	while (sum >= 25)
 	{
 		sum = sum - 25;
