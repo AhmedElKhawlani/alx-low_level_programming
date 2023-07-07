@@ -6,8 +6,10 @@
 #include <stdio.h>
 
 /**
- * main : prints the name of the executable
+ * main - prints the name of the executable
  * followed by a new line
+ * @argc : Number of arguments
+ * @argv : Array of arguments
  * Return: 0
  */
 
