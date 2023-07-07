@@ -11,14 +11,17 @@
 
 int main(int argc, char *argv[])
 {
+	int pow ,n ,m
+
 	if (argc < 3 || argc > 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	int pow;
 
-	pow = atoi(argv[1]) * atoi(argv[2]);
+	n = atoi(argv[1]);
+	m = atoi(argv[2]);
+	pow = n * m;
 	printf("%d\n", pow);
 	return (0);
 }
