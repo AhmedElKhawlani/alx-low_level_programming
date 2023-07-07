@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int pow ,n ,m;
+	int pow, n, m;
 
 	if (argc < 3 || argc > 3)
 	{
