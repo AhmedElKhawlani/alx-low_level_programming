@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int i, j, q;
+	int i, j;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		{
 			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
-				puts("Error");
+				printf("Error\n");
 				return (1);
 			}
 		}
