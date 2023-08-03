@@ -28,15 +28,20 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i;
 	unsigned int s;
+	unsigned int len;
 
 	if (!b)
 		return (0);
-
+	len = 0;
 	for (i = 0; b[i] != '\0'; i++)
+		len = len + 1;
+	s = 0;
+	for (i = 0; i < len; i++)
 	{
-		if (b[i] != 0 && b[i] != 1)
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		s = s + b[i] * power(2, i);
+		if (b[i] == '1')
+			s = s + power(2, len - 1 - i);
 	}
 	return (s);
 }
