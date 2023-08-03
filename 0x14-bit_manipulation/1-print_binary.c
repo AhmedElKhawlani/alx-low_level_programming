@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	int temp_byte;
 	int i;
 	int j;
-	
+
 	if (n == 0)
 	{
 		_putchar('0');
@@ -23,7 +23,6 @@ void print_binary(unsigned long int n)
 	i = number_of_bits - 1;
 	while (((n >> i) & 1) == 0)
 		i--;
-	
 	for (j = i; j >= 0; j--)
 	{
 		temp_byte = (n >> j) & 1;
