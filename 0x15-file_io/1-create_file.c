@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 	int length;
 	int num_wrbytes;
 
-	if (!filename == -1)
+	if (!filename)
 	{
 		return (0);
 	}
