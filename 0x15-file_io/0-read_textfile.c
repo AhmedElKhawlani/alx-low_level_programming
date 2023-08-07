@@ -18,20 +18,28 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	
 	buffer = malloc(sizeof(char) * letters);
 	if (!filename || !buffer)
+	{
 		free(buffer);
 		return (0);
+	}
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
-		free(buffer);
-		return (0);	
-	num_rdbytes = read(file_descriptor, buffer, letters);
-	if (num_rdbytes == -1)
+	{
 		free(buffer);
 		return (0);
+	}
+	num_rdbytes = read(file_descriptor, buffer, letters);
+	if (num_rdbytes == -1)
+	{
+		free(buffer);
+		return (0);
+	}
 	num_wrbytes = write(STDOUT_FILENO, buffer, num_rdbytes);
 	if (num_wrbytes == -1)
+	{
 		free(buffer);
-		return (-1);
+		return (0);
+	}
 	free(buffer);
 	close(file_descriptor);
 	return (num_wrbytes);
