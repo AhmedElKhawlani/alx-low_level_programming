@@ -23,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 		for (length = 0; text_content[length] != '\0';)
 			length++;
 	}
-	num_wrbytes = write(file_descriptor, text_content, len);
+	num_wrbytes = write(file_descriptor, text_content, length);
 	if (num_wrbytes == -1)
 	{
 		return (0);
