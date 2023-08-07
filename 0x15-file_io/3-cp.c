@@ -10,8 +10,8 @@
 char *initiate_buffer(char *filename)
 {
 	char *b;
-	b = malloc(sizeof(char) * 1024);
 
+	b = malloc(sizeof(char) * 1024);
 	if (!b)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
@@ -29,7 +29,7 @@ char *initiate_buffer(char *filename)
 void Close_file(int descriptor)
 {
 	int tester;
-	
+
 	tester = close(descriptor);
 	if (tester == -1)
 	{
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 {
 	char *buffer;
 	int file_to, file_from, from_size, to_size, close_to, close_from;
-	
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
