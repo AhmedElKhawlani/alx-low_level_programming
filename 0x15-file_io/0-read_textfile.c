@@ -8,14 +8,14 @@
  * Return: The actual number of letters it could read and print if success
  * 0 if fail
  */
- 
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_descriptor;
 	char *buffer;
 	int num_rdbytes;
 	int num_wrbytes;
-	
+
 	buffer = malloc(sizeof(char) * letters);
 	if (!filename || !buffer)
 	{
