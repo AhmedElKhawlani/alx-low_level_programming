@@ -51,7 +51,7 @@ void Close_file(int descriptor)
 int main(int argc, char *argv[])
 {
 	char *buffer;
-	int file_to, file_from, from_size, to_size, close_to, close_from;
+	int file_to, file_from, from_size, to_size;
 
 	if (argc != 3)
 	{
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 	}
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	file_from = open(argv[1], O_RDONLY);
-	buffer = initiate_buffer(argv[2])
+	buffer = initiate_buffer(argv[2]);
 	from_size = read(file_from, buffer, 1024);
 	do {
 		if (file_from == -1 || from_size == -1)
