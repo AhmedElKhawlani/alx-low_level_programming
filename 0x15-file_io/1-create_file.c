@@ -13,6 +13,10 @@ int create_file(const char *filename, char *text_content)
 	int length;
 	int num_wrbytes;
 
+	if (!filename == -1)
+	{
+		return (0);
+	}
 	file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	if (file_descriptor == -1)
 	{
