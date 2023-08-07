@@ -1,7 +1,10 @@
 #include "main.h"
 
+char *initiate_buffer(char *filename);
+void Close_file(int descriptor);
+
 /**
- * initiate_buffer : Creates a buffer, this function is added
+ * initiate_buffer - Creates a buffer, this function is added
  * to make main() with less number of lines
  * @filename : The name of the file_to
  * Return: Pointer to the initiated buffer
@@ -21,7 +24,7 @@ char *initiate_buffer(char *filename)
 }
 
 /**
- * Close_file : Closes a file this function is created
+ * Close_file - Closes a file this function is created
  * to make main() with less number of lines
  * @descriptor : File descriptor
  */
