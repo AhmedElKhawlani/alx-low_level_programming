@@ -9,32 +9,24 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int file_descriptor;
-	int length;
-	int num_wrbytes;
+	int file_descriptor, num_wrbytes, len = 0;
 
 	if (!filename)
-	{
 		return (-1);
-	}
-	if (!text_content)
+
+	if (text_content)
 	{
-		file_descriptor = open(filename, O_RDWR);
-		if (file_descriptor == -1)
-			return (-1);
-		return (1);
+		for (len = 0; text_content[len];)
+			len++;
+	}
+
 	file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	if (file_descriptor == -1)
-	{
+	num_wrbytes = write(o, text_content, len);
+
+	if (file_descriptor == -1 || num_wrbytes == -1)
 		return (-1);
-	}
-	for (length = 0; text_content[length];)
-		length++;
-	num_wrbytes = write(file_descriptor, text_content, length);
-	if (num_wrbytes == -1)
-	{
-		return (-1);
-	}
+
 	close(file_descriptor);
+
 	return (1);
 }
