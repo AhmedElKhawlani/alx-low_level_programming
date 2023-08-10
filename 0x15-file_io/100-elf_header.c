@@ -52,7 +52,9 @@ void show_class(unsigned char *class)
 {
 	printf("  Class:                             ");
 
-	unsigned char elf_class = class[EI_CLASS];
+	unsigned char elf_class;
+	
+	elf_class = class[EI_CLASS];
 
 	if (elf_class == ELFCLASSNONE)
 		printf("none\n");
