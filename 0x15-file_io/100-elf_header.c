@@ -1,5 +1,10 @@
-#include "main.h"
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <elf.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 void is_elf(unsigned char *magic);
 void show_class(unsigned char *class);
