@@ -46,10 +46,10 @@ void is_elf(unsigned char *magic)
 void show_class(unsigned char *class)
 {
 	printf("  Class:                             ");
-	
-	unsigned char elf_class = class[EI_CLASS];
 
-    if (elf_class == ELFCLASSNONE)
+	unsigned char elf_class = class[EI_CLASS];
+	
+	if (elf_class == ELFCLASSNONE)
 		printf("none\n");
 	else if (elf_class == ELFCLASS32)
 		printf("ELF32\n");
@@ -86,10 +86,10 @@ void show_magic(unsigned char *magic)
  */
 void show_version(unsigned char *version)
 {
-    printf("  Version:                           %d", version[EI_VERSION]);
-    if (version[EI_VERSION] == EV_CURRENT)
+	printf("  Version:                           %d", version[EI_VERSION]);
+	if (version[EI_VERSION] == EV_CURRENT)
 		printf(" (current)\n");
-    else
+	else
 		printf("\n");
 }
 
@@ -99,8 +99,8 @@ void show_version(unsigned char *version)
  */
 void show_data(unsigned char *class)
 {
-    printf("  Data:                              ");
-    if (class[EI_DATA] == ELFDATANONE)
+	printf("  Data:                              ");
+	if (class[EI_DATA] == ELFDATANONE)
 		printf("none\n");
 	else if (class[EI_DATA] == ELFDATA2LSB)
 		printf("2's complement, little endian\n");
@@ -114,13 +114,13 @@ void show_data(unsigned char *class)
  * show_os_abi - Displays the OS/ABI of an ELF header
  * @version: A pointer to an array containing the ELF version
  */
-	
+
 void show_os_abi(unsigned char *version)
 {
-    printf("  OS/ABI:                            ");
-    if (version[EI_OSABI] == ELFOSABI_NONE)
+	printf("  OS/ABI:                            ");
+	if (version[EI_OSABI] == ELFOSABI_NONE)
 		printf("UNIX - System V\n");
-    else if (version[EI_OSABI] == ELFOSABI_TRU64)
+	else if (version[EI_OSABI] == ELFOSABI_TRU64)
 		printf("UNIX - TRU64\n");
 	else if (version[EI_OSABI] == ELFOSABI_ARM)
 		printf("ARM\n");
@@ -128,15 +128,15 @@ void show_os_abi(unsigned char *version)
 		printf("Standalone App\n");
 	else if (version[EI_OSABI] == ELFOSABI_HPUX)
 		printf("UNIX - HP-UX\n");
-    else if (version[EI_OSABI] == ELFOSABI_NETBSD)
+	else if (version[EI_OSABI] == ELFOSABI_NETBSD)
 		printf("UNIX - NetBSD\n");
-    else if (version[EI_OSABI] == ELFOSABI_LINUX)
+	else if (version[EI_OSABI] == ELFOSABI_LINUX)
 		printf("UNIX - Linux\n");
-    else if (version[EI_OSABI] == ELFOSABI_SOLARIS)
+	else if (version[EI_OSABI] == ELFOSABI_SOLARIS)
 		printf("UNIX - Solaris\n");
-    else if (version[EI_OSABI] == ELFOSABI_IRIX)
+	else if (version[EI_OSABI] == ELFOSABI_IRIX)
 		printf("UNIX - IRIX\n");
-    else if (version[EI_OSABI] == ELFOSABI_FREEBSD)
+	else if (version[EI_OSABI] == ELFOSABI_FREEBSD)
 		printf("UNIX - FreeBSD\n");
 	else
 		printf("<unknown: %x>\n", version[EI_OSABI]);
@@ -148,7 +148,8 @@ void show_os_abi(unsigned char *version)
  */
 void show_abi(unsigned char *version_abi)
 {
-	printf("  ABI Version:                       %d\n", version_abi[EI_ABIVERSION]);
+	printf("  ABI Version:                       %d\n",
+			version_abi[EI_ABIVERSION]);
 }
 
 /**
@@ -173,21 +174,21 @@ void close_elf_file(int elf)
 
 void show_type(unsigned int type, unsigned char *class)
 {
-    if (class[EI_DATA] == ELFDATA2MSB)
-        type >>= 8;
-    printf("  Type:                              ");
-    if (type == ET_NONE)
-        printf("NONE (None)\n");
-    else if (type == ET_REL)
-        printf("REL (Relocatable file)\n");
-    else if (type == ET_EXEC)
-        printf("EXEC (Executable file)\n");
-    else if (type == ET_DYN)
-        printf("DYN (Shared object file)\n");
-    else if (type == ET_CORE)
-        printf("CORE (Core file)\n");
-    else
-        printf("<unknown: %x>\n", type);
+	if (class[EI_DATA] == ELFDATA2MSB)
+		type >>= 8;
+	printf("  Type:                              ");
+	if (type == ET_NONE)
+		printf("NONE (None)\n");
+	else if (type == ET_REL)
+		printf("REL (Relocatable file)\n");
+	else if (type == ET_EXEC)
+		printf("EXEC (Executable file)\n");
+	else if (type == ET_DYN)
+		printf("DYN (Shared object file)\n");
+	else if (type == ET_CORE)
+		printf("CORE (Core file)\n");
+	else
+		printf("<unknown: %x>\n", type);
 }
 
 /**
