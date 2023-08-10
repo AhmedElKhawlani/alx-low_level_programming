@@ -10,7 +10,7 @@ void show_os_abi(unsigned char *version);
 void show_abi(unsigned char *version_abi);
 void close_elf_file(int elf);
 void show_type(unsigned int type, unsigned char *class);
-void print_entry(unsigned long int entry, unsigned char *class);
+void show_entry(unsigned long int entry, unsigned char *class);
 
 /**
  * is_elf - Determine if a file is an ELF or not
@@ -22,7 +22,7 @@ void print_entry(unsigned long int entry, unsigned char *class);
 void is_elf(unsigned char *magic)
 {
 	int error = 0;
-	
+
 	if (magic[0] != 127)
 		error += 1;
 	if (magic[1] != 'E')
@@ -43,21 +43,20 @@ void is_elf(unsigned char *magic)
  * @class: A pointer to the string containing the ELF class
  */
 
-void show_class(unsigned char *class) 
+void show_class(unsigned char *class)
 {
-    printf("  Class:                             ");
+	printf("  Class:                             ");
 	
-    unsigned char elf_class = class[EI_CLASS];
+	unsigned char elf_class = class[EI_CLASS];
 
-    if (elf_class == ELFCLASSNONE) {
-        printf("none\n");
-    } else if (elf_class == ELFCLASS32) {
-        printf("ELF32\n");
-    } else if (elf_class == ELFCLASS64) {
-        printf("ELF64\n");
-    } else {
-        printf("<unknown: %x>\n", elf_class);
-    }
+    if (elf_class == ELFCLASSNONE)
+		printf("none\n");
+	else if (elf_class == ELFCLASS32)
+		printf("ELF32\n");
+	else if (elf_class == ELFCLASS64)
+		printf("ELF64\n");
+	else
+		printf("<unknown: %x>\n", elf_class);
 }
 
 /**
@@ -69,7 +68,6 @@ void show_magic(unsigned char *magic)
 	int i = 0;
 
 	printf("  Magic:   ");
-
 	while (i < EI_NIDENT)
 	{
 		printf("%02x", magic[i]);
@@ -78,7 +76,7 @@ void show_magic(unsigned char *magic)
 			printf("\n");
 		else
 			printf(" ");
-		i++
+		i++;
 	}
 }
 
@@ -197,7 +195,7 @@ void show_type(unsigned int type, unsigned char *class)
  * @entry: The address of the ELF entry point
  * @class: A pointer to an array containing the ELF class
  */
-void print_entry(unsigned long int entry, unsigned char *class)
+void show_entry(unsigned long int entry, unsigned char *class)
 {
 	printf("  Entry point address:               ");
 	if (class[EI_DATA] == ELFDATA2MSB)
@@ -241,7 +239,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (read_return == -1)
 	{
 		free(header);
-		close_elf(fd);
+		close_elf_file(fd);
 		dprintf(STDERR_FILENO, "Error: `%s`: File Not Found\n", argv[1]);
 		exit(98);
 	}
