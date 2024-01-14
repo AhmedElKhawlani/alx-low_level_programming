@@ -3,8 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - assigns a random number to int n each time the program is executed
- * it prints the sign of n
+ * main - Prints the sign of a random number
  * Return: Always 0
  */
 
