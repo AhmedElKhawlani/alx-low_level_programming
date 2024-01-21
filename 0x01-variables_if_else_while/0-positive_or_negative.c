@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - Prints the sign of a random number
- * Return: Always 0
+ * main - Prints the sign of a random number;
+ * Return: Always 0.
  */
 
 int main(void)
