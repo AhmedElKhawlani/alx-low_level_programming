@@ -3,8 +3,8 @@
 
 /**
  * print_to_98 - Prints all natural numbers from a to 98,
- * followed by a new line
- * @a: print from this number to 98
+ * followed by a new line;
+ * @a: Print from this number to 98.
  */
 void print_to_98(int a)
 {
