@@ -1,8 +1,7 @@
 /**
- * set_string - sets the value of a pointer to a char
- * @s: pointer to pointer to a char
- *@to: the address to match
- *Return: void
+ * set_string - Sets the value of a pointer to a char;
+ * @s: Pointer to pointer to a char;
+ * @to: The address to match.
  */
 
 void set_string(char **s, char *to)
