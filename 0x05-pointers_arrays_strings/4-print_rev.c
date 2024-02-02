@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_rev - prints a string in reverse, followed by a new line
- * @ch: string to be printed
+ * print_rev - Prints a string in reverse, followed by a new line;
+ * @ch: String to be printed.
  */
+
 void print_rev(char *ch)
 {
 	int i, j, len;

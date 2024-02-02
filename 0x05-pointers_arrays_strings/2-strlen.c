@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
- * @ch: string to evaluate
- *
- * Return: the length of the string
+ * _strlen - Returns the length of a string;
+ * @ch: String to evaluate;
+ * Return: The length of the string.
  */
+
 int _strlen(char *ch)
 {
 	int i;
