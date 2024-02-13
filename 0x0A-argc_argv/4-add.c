@@ -3,10 +3,10 @@
 #include "main.h"
 
 /**
- * main - shows the addition of two numbers passed in parameters
- * @argc: Number of arguments
- * @argv: Array of arguments
- * Return: 0 if success, 1 Otherwise
+ * main - Shows the addition of two numbers passed in parameters;
+ * @argc: Number of arguments;
+ * @argv: Array of arguments;
+ * Return: 0 if success, 1 Otherwise.
  */
 
 int main(int argc, char *argv[])

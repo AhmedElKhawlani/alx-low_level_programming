@@ -3,12 +3,12 @@
 #include "main.h"
 
 /**
- * main - prints the minimum number of coins
- * @argc: number of arguments
- * @argv: array of arguments
- *
- * Return: 0 (Success), 1 (Error)
+ * main - Prints the minimum number of coins;
+ * @argc: Number of arguments;
+ * @argv: Array of arguments;
+ * Return: 0 (Success), 1 (Error).
  */
+
 int main(int argc, char *argv[])
 {
 	int num, j, result;
