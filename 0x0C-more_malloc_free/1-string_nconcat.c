@@ -2,13 +2,13 @@
 #include "main.h"
 
 /**
- * *string_nconcat - concatenates two strings
- * @s1: Base string
- * @s2: String to be added
- * @n: number of bytes from s2 to concatenate to s1
- *
- * Return: pointer to the resulting string
+ * *string_nconcat - Concatenates two strings;
+ * @s1: Base string;
+ * @s2: String to be added;
+ * @n: Number of bytes from s2 to concatenate to s1;
+ * Return: Pointer to the resulting string.
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
