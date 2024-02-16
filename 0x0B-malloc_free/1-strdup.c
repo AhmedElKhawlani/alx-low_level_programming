@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
- * *_strdup - copies the string passed as parameter
- * @str: string to copy
- *
- * Return: pointer to the copied string (Success), NULL (Error)
+ * *_strdup - Copies the string passed as parameter;
+ * @str: String to copy;
+ * Return: Pointer to the copied string (Success), NULL (Error).
  */
+
 char *_strdup(char *str)
 {
 	char *dup;

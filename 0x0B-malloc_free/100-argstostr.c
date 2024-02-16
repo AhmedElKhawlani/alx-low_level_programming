@@ -1,12 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * argstostr - concatenates all arguments of the program
- * @ac: argument count
- * @av: pointer to array of size ac
- * Return: Returns a pointer to a new string, or NULL if it fails
- * NULL if ac == 0 or av == NULL
+ * argstostr - Concatenates all arguments of the program;
+ * @ac: Argument count;
+ * @av: Pointer to array of size ac;
+ * Return: Returns a pointer to a new string, or NULL if it fails,
+ * NULL if ac == 0 or av == NULL.
  */
+
 char *argstostr(int ac, char **av)
 {
 	int i, j, k, size;

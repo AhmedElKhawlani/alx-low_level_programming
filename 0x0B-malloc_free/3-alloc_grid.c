@@ -2,12 +2,13 @@
 #include "main.h"
 
 /**
- * **alloc_grid - creates a 2D array of ints
- * @width: Number of Columns of the matrix
- * @height: Number of Lines of the matrix
- * Return: pointer to the created matrix (Success)
- * or NULL (Error)
+ * **alloc_grid - Creates a 2D array of ints;
+ * @width: Number of Columns of the matrix;
+ * @height: Number of Lines of the matrix;
+ * Return: Pointer to the created matrix (Success),
+ * or NULL (Error).
  */
+
 int **alloc_grid(int width, int height)
 {
 	int **arr;

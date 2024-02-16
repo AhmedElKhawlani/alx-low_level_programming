@@ -2,10 +2,11 @@
 #include "main.h"
 
 /**
- * free_grid - frees the memory allocated for the grid
- * @grid: grid to free
- * @height: height of the grid
+ * free_grid - Frees the memory allocated for the grid;
+ * @grid: Grid to free;
+ * @height: Height of the grid.
  */
+
 void free_grid(int **grid, int height)
 {
 	int i;
